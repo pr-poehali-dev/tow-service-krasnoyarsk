@@ -137,11 +137,11 @@ export default function Index() {
             ))}
           </div>
 
-          <a href="tel:+73912000000"
+          <a href="tel:+79293550404"
             className="flex items-center gap-2 bg-neon text-steel px-4 py-2 font-oswald font-semibold text-sm tracking-wider hover:bg-neon/90 transition-colors"
             style={{ color: "#060B14" }}>
             <Icon name="Phone" size={14} />
-            +7 (391) 200-00-00
+            +7 (929) 355-04-04
           </a>
         </div>
       </nav>
@@ -475,9 +475,9 @@ export default function Index() {
 
           <div className="grid md:grid-cols-3 gap-px" style={{ background: "#1A2640" }}>
             {[
-              { icon: "Phone", label: "ТЕЛЕФОН", value: "+7 (391) 200-00-00", sub: "Круглосуточно, 24/7" },
+              { icon: "Phone", label: "ТЕЛЕФОН", value: "+7 (929) 355-04-04", sub: "Круглосуточно, 24/7" },
               { icon: "MapPin", label: "ДИСПЕТЧЕРСКАЯ", value: "Красноярск", sub: "ул. Взлётная, 59" },
-              { icon: "MessageCircle", label: "МЕССЕНДЖЕРЫ", value: "WhatsApp / Telegram", sub: "+7 (391) 200-00-00" },
+              { icon: "MessageCircle", label: "МЕССЕНДЖЕРЫ", value: "WhatsApp / Telegram", sub: "+7 (929) 355-04-04" },
             ].map((c, i) => (
               <div key={i} className="p-8 group transition-all duration-200" style={{ background: "#0D1626" }}
                 onMouseEnter={e => (e.currentTarget.style.background = "#0D1A2D")}
@@ -505,9 +505,9 @@ export default function Index() {
             <span className="font-mono text-xs text-white/30 tracking-wider">ЭВАКУАТОР КРАСНОЯРСК © 2026</span>
           </div>
           <CoordDisplay />
-          <a href="tel:+73912000000" className="font-oswald text-sm tracking-wider transition-colors hover:text-neon"
+          <a href="tel:+79293550404" className="font-oswald text-sm tracking-wider transition-colors hover:text-neon"
             style={{ color: "#00FFB270" }}>
-            +7 (391) 200-00-00
+            +7 (929) 355-04-04
           </a>
         </div>
       </footer>

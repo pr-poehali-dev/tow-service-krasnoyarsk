@@ -150,7 +150,7 @@ export default function Index() {
       <section id="hero" className="relative min-h-screen flex items-center pt-16">
         <RadarBg />
 
-        <div className="relative max-w-7xl mx-auto px-6 py-20 grid md:grid-cols-2 gap-16 items-center">
+        <div className="relative max-w-4xl mx-auto px-6 py-20">
           <div>
             <div className="opacity-0 animate-fade-in mb-6">
               <StatusBar />
@@ -196,60 +196,7 @@ export default function Index() {
             </div>
           </div>
 
-          {/* GPS CARD */}
-          <div className="opacity-0 animate-fade-in-delay2 relative">
-            <div className="relative border border-grid rounded-sm overflow-hidden"
-              style={{ background: "#0D1626", boxShadow: "0 0 60px #00FFB215, inset 0 0 40px #00FFB205" }}>
-              <div className="flex items-center justify-between px-4 py-3 border-b border-grid/50">
-                <div className="flex items-center gap-2">
-                  <Icon name="MapPin" size={14} className="text-neon" />
-                  <span className="font-mono text-xs text-neon/70 tracking-wider">GPS ТРЕКИНГ</span>
-                </div>
-                <CoordDisplay />
-              </div>
 
-              <div className="relative h-64 overflow-hidden"
-                style={{ background: "linear-gradient(135deg, #060B14 0%, #0D1A2D 50%, #060B14 100%)" }}>
-                <div className="absolute inset-0 opacity-10"
-                  style={{
-                    backgroundImage: "linear-gradient(#00FFB2 1px, transparent 1px), linear-gradient(90deg, #00FFB2 1px, transparent 1px)",
-                    backgroundSize: "20px 20px",
-                  }} />
-                {[80, 140, 200].map((r, i) => (
-                  <div key={i} className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full border"
-                    style={{ width: r, height: r, borderColor: "#00FFB230" }} />
-                ))}
-                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-4 h-4 rounded-full"
-                  style={{ background: "#00FFB2", boxShadow: "0 0 20px #00FFB2, 0 0 40px #00FFB260" }} />
-                <div
-                  className="absolute top-1/2 left-1/2 w-1/2 h-px origin-left"
-                  style={{ background: "linear-gradient(to right, #00FFB260, transparent)", animation: "rotate-radar 3s linear infinite" }}
-                />
-                <div className="absolute top-8 right-8 flex flex-col gap-1">
-                  {["ТЦ Планета", "пр. Кр. рабочий", "Сопка"].map((label, i) => (
-                    <div key={label} className="flex items-center gap-1.5">
-                      <div className="w-1.5 h-1.5 rounded-full"
-                        style={{ background: i === 0 ? "#FF3B30" : "#00FFB2", opacity: 0.7 }} />
-                      <span className="font-mono text-[9px] text-white/40">{label}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-
-              <div className="px-4 py-3 grid grid-cols-3 gap-4 border-t border-grid/50">
-                {[
-                  { label: "МАШИНА #7", value: "В ПУТИ", neon: true },
-                  { label: "РАССТ.", value: "3.2 КМ", neon: false },
-                  { label: "ПРИБЫТИЕ", value: "~18 МИН", neon: true },
-                ].map(item => (
-                  <div key={item.label} className="text-center">
-                    <div className="font-oswald font-semibold text-base" style={{ color: item.neon ? "#00FFB2" : "white" }}>{item.value}</div>
-                    <div className="font-mono text-[9px] text-white/30 tracking-widest mt-0.5">{item.label}</div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
         </div>
       </section>
 

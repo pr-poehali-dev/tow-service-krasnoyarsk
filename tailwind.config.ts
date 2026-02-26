@@ -6,7 +6,7 @@ export default {
 		"./pages/**/*.{ts,tsx}",
 		"./components/**/*.{ts,tsx}",
 		"./app/**/*.{ts,tsx}",
-		"./src/**/*.{ts,tsx}",
+		"./src/**/*.{ts,tsx}"
 	],
 	prefix: "",
 	theme: {
@@ -18,7 +18,18 @@ export default {
 			}
 		},
 		extend: {
+			fontFamily: {
+				oswald: ['Oswald', 'sans-serif'],
+				ibm: ['IBM Plex Sans', 'sans-serif'],
+				mono: ['IBM Plex Mono', 'monospace'],
+			},
 			colors: {
+				neon: '#00FFB2',
+				radar: '#0AFFEF',
+				danger: '#FF3B30',
+				steel: '#0A0E1A',
+				panel: '#0D1626',
+				grid: '#1A2640',
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
 				ring: 'hsl(var(--ring))',
@@ -69,6 +80,26 @@ export default {
 				sm: 'calc(var(--radius) - 4px)'
 			},
 			keyframes: {
+				'fade-in': {
+					from: { opacity: '0', transform: 'translateY(20px)' },
+					to: { opacity: '1', transform: 'translateY(0)' }
+				},
+				'scan': {
+					from: { transform: 'translateY(-100%)' },
+					to: { transform: 'translateY(100vh)' }
+				},
+				'pulse-neon': {
+					'0%, 100%': { boxShadow: '0 0 5px #00FFB2, 0 0 20px #00FFB240' },
+					'50%': { boxShadow: '0 0 15px #00FFB2, 0 0 40px #00FFB280, 0 0 60px #00FFB230' }
+				},
+				'blink': {
+					'0%, 100%': { opacity: '1' },
+					'50%': { opacity: '0' }
+				},
+				'rotate-radar': {
+					from: { transform: 'rotate(0deg)' },
+					to: { transform: 'rotate(360deg)' }
+				},
 				'accordion-down': {
 					from: {
 						height: '0'
@@ -88,7 +119,15 @@ export default {
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'fade-in': 'fade-in 0.6s ease-out forwards',
+				'fade-in-delay': 'fade-in 0.6s ease-out 0.2s forwards',
+				'fade-in-delay2': 'fade-in 0.6s ease-out 0.4s forwards',
+				'fade-in-delay3': 'fade-in 0.6s ease-out 0.6s forwards',
+				'scan': 'scan 4s linear infinite',
+				'pulse-neon': 'pulse-neon 2s ease-in-out infinite',
+				'blink': 'blink 1s step-end infinite',
+				'rotate-radar': 'rotate-radar 3s linear infinite',
 			}
 		}
 	},
